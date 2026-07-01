@@ -1,0 +1,219 @@
+/* ============================================================
+   COMPONENTS.CSS — Reusable Component Styles
+   Portfolio Website · Dark Futuristic Theme
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   1. BUTTONS
+   ------------------------------------------------------------ */
+
+/* Base button reset & shared styles */
+.btn {
+  padding: 12px 28px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: var(--transition-default);
+  font-family: var(--font-body);
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  line-height: 1.4;
+  white-space: nowrap;
+}
+
+/* Primary — gradient fill */
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+  color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--glow-blue);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Outline — ghost variant */
+.btn-outline {
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #ffffff;
+}
+
+.btn-outline:hover {
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--color-primary);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+}
+
+/* ------------------------------------------------------------
+   2. GLASS CARD
+   ------------------------------------------------------------ */
+
+.glass-card {
+  background: var(--bg-glass);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--radius-lg);
+  padding: 32px;
+  transition: var(--transition-default);
+}
+
+.glass-card:hover {
+  border-color: rgba(16, 185, 129, 0.3);
+  transform: translateY(-4px);
+  box-shadow: var(--glow-blue);
+}
+
+/* ------------------------------------------------------------
+   3. BADGES / PILLS
+   ------------------------------------------------------------ */
+
+/* Base badge — electric blue */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-primary);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+  transition: var(--transition-default);
+}
+
+.badge:hover {
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: var(--glow-blue);
+}
+
+/* Purple variant */
+.badge-purple {
+  background: rgba(6, 182, 212, 0.1);
+  color: var(--color-secondary);
+  border: 1px solid rgba(6, 182, 212, 0.2);
+}
+
+.badge-purple:hover {
+  background: rgba(6, 182, 212, 0.2);
+  box-shadow: var(--glow-purple);
+}
+
+/* Cyan variant */
+.badge-cyan {
+  background: rgba(52, 211, 153, 0.1);
+  color: var(--color-accent);
+  border: 1px solid rgba(52, 211, 153, 0.2);
+}
+
+.badge-cyan:hover {
+  background: rgba(52, 211, 153, 0.2);
+  box-shadow: var(--glow-cyan);
+}
+
+/* Success / Emerald variant */
+.badge-success {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-success);
+  border: 1px solid rgba(16, 185, 129, 0.2);
+}
+
+.badge-success:hover {
+  background: rgba(16, 185, 129, 0.2);
+  box-shadow: 0 0 20px rgba(16, 185, 129, 0.3);
+}
+
+/* ------------------------------------------------------------
+   4. SOCIAL LINK ICONS
+   ------------------------------------------------------------ */
+
+.social-links {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.social-link {
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--border-glass);
+  color: var(--text-secondary);
+  transition: var(--transition-default);
+  font-size: 1.2rem;
+}
+
+.social-link:hover {
+  color: var(--color-primary);
+  background: rgba(16, 185, 129, 0.1);
+  border-color: var(--color-primary);
+  box-shadow: var(--glow-blue);
+  transform: translateY(-2px);
+}
+
+/* ------------------------------------------------------------
+   5. SECTION DIVIDER
+   ------------------------------------------------------------ */
+
+.section-divider {
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(16, 185, 129, 0.3),
+    transparent
+  );
+  margin: 0;
+  border: none;
+}
+
+/* ------------------------------------------------------------
+   6. TOOLTIP (lightweight)
+   ------------------------------------------------------------ */
+
+[data-tooltip] {
+  position: relative;
+}
+
+[data-tooltip]::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%) translateY(4px);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+  font-size: 0.75rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 100;
+  border: 1px solid var(--border-glass);
+}
+
+[data-tooltip]:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}

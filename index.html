@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Atul — Full-Stack Developer portfolio. Explore my projects, skills, and experience in building modern digital experiences.">
+  <meta name="author" content="Atul">
+  <meta name="theme-color" content="#000000">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Atul — Full-Stack Developer">
+  <meta property="og:description" content="Building modern digital experiences. Explore my projects, skills, and work.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/project_ai_dashboard.jpg">
+
+  <title>Atul — Full-Stack Developer</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+  <!-- Google Fonts: Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Lucide Icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet" href="css/components.css">
+  <link rel="stylesheet" href="css/sections.css">
+</head>
+<body>
+
+  <!-- ===================== NAVIGATION ===================== -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="#hero" class="nav-logo">Atul Kumar Singh<span>.</span></a>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO SECTION ===================== -->
+  <section class="hero section" id="hero">
+    <canvas class="hero-canvas" id="hero-canvas"></canvas>
+    <div class="hero-content">
+      <div class="hero-badge reveal">
+        <span>👋</span> Hey, I'm <span class="highlight">Atul</span>
+      </div>
+      <h1 class="hero-name reveal reveal-delay-1">
+        Building the<br><span class="gradient-text">Future of Web</span>
+      </h1>
+      <div class="hero-typing reveal reveal-delay-2">
+        <span id="typing-text"></span><span class="cursor">|</span>
+      </div>
+      <p class="hero-tagline reveal reveal-delay-3">
+        I craft elegant, performant, and user-centric digital experiences that make an impact.
+      </p>
+      <div class="hero-ctas reveal reveal-delay-3">
+        <a href="#projects" class="btn btn-primary">
+          <i data-lucide="briefcase" style="width:18px;height:18px;"></i>
+          View My Work
+        </a>
+        <a href="#contact" class="btn btn-outline">
+          <i data-lucide="send" style="width:18px;height:18px;"></i>
+          Get In Touch
+        </a>
+      </div>
+      <div class="social-links hero-social reveal reveal-delay-4">
+        <a href="https://github.com/atul247ui" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub" data-tooltip="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn" data-tooltip="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X" data-tooltip="Twitter / X">
+          <i data-lucide="twitter"></i>
+        </a>
+        <a href="mailto:atul@example.com" class="social-link" aria-label="Email" data-tooltip="Email">
+          <i data-lucide="mail"></i>
+        </a>
+      </div>
+    </div>
+    <div class="hero-scroll-indicator">
+      <i data-lucide="chevrons-down" style="width:28px;height:28px;"></i>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== ABOUT SECTION ===================== -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">About <span class="gradient-text">Me</span></h2>
+        <p class="section-subtitle reveal reveal-delay-1">A quick snapshot of who I am and what drives me.</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-text reveal">
+          <h3>I build things for the web.</h3>
+          <p>
+            I'm a passionate <span class="highlight">Full-Stack Developer</span> with a love for clean code, 
+            intuitive design, and solving complex problems. I believe that great software isn't just about 
+            functionality — it's about creating experiences that users genuinely enjoy.
+          </p>
+          <p>
+            Currently, I'm focused on building accessible, performant web applications using modern 
+            technologies. I'm always exploring new tools and frameworks to push the boundaries of what's 
+            possible on the web.
+          </p>
+          <p>
+            When I'm not coding, you'll find me exploring open-source projects, reading about 
+            <span class="highlight">AI/ML</span>, or diving deep into system design patterns.
+          </p>
+        </div>
+        <div class="code-card reveal reveal-delay-1">
+          <div class="code-card-header">
+            <span class="code-card-dot" style="background:#ef4444;"></span>
+            <span class="code-card-dot" style="background:#eab308;"></span>
+            <span class="code-card-dot" style="background:#22c55e;"></span>
+          </div>
+          <div class="code-card-body">
+            <pre><code><span class="code-key">const</span> <span class="code-value">atul</span> = {
+  <span class="code-key">location</span>: <span class="code-string">"India"</span>,
+  <span class="code-key">education</span>: <span class="code-string">"Computer Science"</span>,
+  <span class="code-key">interests</span>: [
+    <span class="code-string">"Web Dev"</span>,
+    <span class="code-string">"AI/ML"</span>,
+    <span class="code-string">"System Design"</span>,
+    <span class="code-string">"Open Source"</span>
+  ],
+  <span class="code-key">currently</span>: <span class="code-string">"Building cool stuff"</span>,
+  <span class="code-key">funFact</span>: <span class="code-string">"I debug with coffee ☕"</span>
+};</code></pre>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== SKILLS SECTION ===================== -->
+  <section class="section" id="skills">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">Technical <span class="gradient-text">Skills</span></h2>
+        <p class="section-subtitle reveal reveal-delay-1">Technologies and tools I work with on a daily basis.</p>
+      </div>
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-card glass-card reveal">
+          <div class="skill-card-icon" style="background:rgba(16,185,129,0.1);color:#10b981;">
+            <i data-lucide="layout" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Frontend</h3>
+          <div class="skill-tags">
+            <span class="badge">HTML5</span>
+            <span class="badge">CSS3</span>
+            <span class="badge">JavaScript</span>
+            <span class="badge">React</span>
+            <span class="badge">Next.js</span>
+            <span class="badge">TypeScript</span>
+            <span class="badge">Tailwind CSS</span>
+          </div>
+        </div>
+        <!-- Backend -->
+        <div class="skill-card glass-card reveal reveal-delay-1">
+          <div class="skill-card-icon" style="background:rgba(6,182,212,0.1);color:#06b6d4;">
+            <i data-lucide="server" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Backend</h3>
+          <div class="skill-tags">
+            <span class="badge badge-purple">Node.js</span>
+            <span class="badge badge-purple">Express</span>
+            <span class="badge badge-purple">Python</span>
+            <span class="badge badge-purple">REST APIs</span>
+            <span class="badge badge-purple">MongoDB</span>
+            <span class="badge badge-purple">PostgreSQL</span>
+          </div>
+        </div>
+        <!-- Tools & DevOps -->
+        <div class="skill-card glass-card reveal reveal-delay-2">
+          <div class="skill-card-icon" style="background:rgba(52,211,153,0.1);color:#34d399;">
+            <i data-lucide="wrench" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Tools & DevOps</h3>
+          <div class="skill-tags">
+            <span class="badge badge-cyan">Git</span>
+            <span class="badge badge-cyan">GitHub</span>
+            <span class="badge badge-cyan">Docker</span>
+            <span class="badge badge-cyan">VS Code</span>
+            <span class="badge badge-cyan">Linux</span>
+            <span class="badge badge-cyan">CI/CD</span>
+          </div>
+        </div>
+        <!-- Currently Learning -->
+        <div class="skill-card glass-card reveal reveal-delay-3">
+          <div class="skill-card-icon" style="background:rgba(16,185,129,0.1);color:#10b981;">
+            <i data-lucide="sparkles" style="width:28px;height:28px;"></i>
+          </div>
+          <h3>Currently Learning</h3>
+          <div class="skill-tags">
+            <span class="badge badge-success">Machine Learning</span>
+            <span class="badge badge-success">AWS</span>
+            <span class="badge badge-success">GraphQL</span>
+            <span class="badge badge-success">Rust</span>
+            <span class="badge badge-success">Web3</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== PROJECTS SECTION ===================== -->
+  <section class="section" id="projects">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">Featured <span class="gradient-text">Projects</span></h2>
+        <p class="section-subtitle reveal reveal-delay-1">A selection of things I've built — from concept to deployment.</p>
+      </div>
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card glass-card reveal">
+          <img src="assets/project_ai_dashboard.jpg" alt="AI Analytics Dashboard" class="project-card-image" loading="lazy">
+          <div class="project-card-content">
+            <h3>AI Analytics Dashboard</h3>
+            <p>A real-time analytics dashboard powered by machine learning, featuring interactive data visualizations, predictive insights, and a sleek glassmorphic interface.</p>
+            <div class="project-card-tags">
+              <span class="badge">React</span>
+              <span class="badge badge-purple">Python</span>
+              <span class="badge badge-cyan">TensorFlow</span>
+              <span class="badge badge-success">D3.js</span>
+            </div>
+            <div class="project-card-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link" style="width:16px;height:16px;"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card glass-card reveal reveal-delay-1">
+          <img src="assets/project_ecommerce_app.jpg" alt="E-Commerce Platform" class="project-card-image" loading="lazy">
+          <div class="project-card-content">
+            <h3>E-Commerce Platform</h3>
+            <p>A full-stack e-commerce platform with user authentication, payment integration, inventory management, and a responsive storefront.</p>
+            <div class="project-card-tags">
+              <span class="badge">Next.js</span>
+              <span class="badge badge-purple">Node.js</span>
+              <span class="badge badge-cyan">MongoDB</span>
+              <span class="badge badge-success">Stripe</span>
+            </div>
+            <div class="project-card-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="external-link" style="width:16px;height:16px;"></i> Live Demo
+              </a>
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card glass-card reveal reveal-delay-2">
+          <img src="assets/project_code_editor.jpg" alt="Collaborative Code Editor" class="project-card-image" loading="lazy">
+          <div class="project-card-content">
+            <h3>Collaborative Code Editor</h3>
+            <p>A real-time collaborative code editor with syntax highlighting, multi-cursor support, integrated terminal, and WebSocket-powered live sync.</p>
+            <div class="project-card-tags">
+              <span class="badge">TypeScript</span>
+              <span class="badge badge-purple">Express</span>
+              <span class="badge badge-cyan">WebSocket</span>
+              <span class="badge badge-success">Monaco</span>
+            </div>
+            <div class="project-card-links">
+              <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
+                <i data-lucide="github" style="width:16px;height:16px;"></i> GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== EXPERIENCE SECTION ===================== -->
+  <section class="section" id="experience">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">My <span class="gradient-text">Journey</span></h2>
+        <p class="section-subtitle reveal reveal-delay-1">A timeline of my professional growth and learning milestones.</p>
+      </div>
+      <div class="timeline">
+        <!-- Experience 1 -->
+        <div class="timeline-item reveal">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2025 — Present</span>
+            <h3>Full-Stack Developer</h3>
+            <h4>Freelance / Personal Projects</h4>
+            <ul>
+              <li>Building full-stack web applications using React, Node.js, and cloud services</li>
+              <li>Designing and implementing RESTful APIs for scalable microservices</li>
+              <li>Contributing to open-source projects and developer communities</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 2 -->
+        <div class="timeline-item reveal reveal-delay-1">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2024 — 2025</span>
+            <h3>Frontend Developer Intern</h3>
+            <h4>Tech Startup</h4>
+            <ul>
+              <li>Developed responsive UI components using React and Tailwind CSS</li>
+              <li>Improved application performance by 40% through code optimization</li>
+              <li>Collaborated in an Agile team of 8 engineers on sprint deliverables</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Experience 3 -->
+        <div class="timeline-item reveal reveal-delay-2">
+          <div class="timeline-dot"></div>
+          <div class="timeline-content glass-card">
+            <span class="timeline-date">2023 — 2024</span>
+            <h3>CS Student & Self-Learner</h3>
+            <h4>University / Online Courses</h4>
+            <ul>
+              <li>Completed foundational coursework in DSA, OS, DBMS, and Computer Networks</li>
+              <li>Built 10+ personal projects exploring different tech stacks</li>
+              <li>Earned certifications in Full-Stack Development and Cloud Computing</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="section-divider"></div>
+
+  <!-- ===================== CONTACT SECTION ===================== -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <h2 class="section-title reveal">Get In <span class="gradient-text">Touch</span></h2>
+        <p class="section-subtitle reveal reveal-delay-1">Have a project in mind, or just want to say hello? I'd love to hear from you.</p>
+      </div>
+      <div class="contact-grid">
+        <!-- Contact Form -->
+        <form class="contact-form glass-card reveal" id="contact-form" novalidate>
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" name="name" placeholder="John Doe" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-email">Your Email</label>
+            <input type="email" id="contact-email" name="email" placeholder="john@example.com" required>
+          </div>
+          <div class="form-group">
+            <label for="contact-message">Your Message</label>
+            <textarea id="contact-message" name="message" placeholder="Tell me about your project or just say hi..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary form-submit">
+            <i data-lucide="send" style="width:18px;height:18px;"></i>
+            Send Message
+          </button>
+        </form>
+        <!-- Contact Info -->
+        <div class="contact-info reveal reveal-delay-1">
+          <div class="contact-info-card glass-card">
+            <div class="contact-info-icon">
+              <i data-lucide="mail" style="width:22px;height:22px;"></i>
+            </div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:atul@example.com">atul@example.com</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-info-icon">
+              <i data-lucide="map-pin" style="width:22px;height:22px;"></i>
+            </div>
+            <div>
+              <h4>Location</h4>
+              <p>India</p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-info-icon">
+              <i data-lucide="linkedin" style="width:22px;height:22px;"></i>
+            </div>
+            <div>
+              <h4>LinkedIn</h4>
+              <p><a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">Connect with me</a></p>
+            </div>
+          </div>
+          <div class="contact-info-card glass-card">
+            <div class="contact-info-icon">
+              <i data-lucide="github" style="width:22px;height:22px;"></i>
+            </div>
+            <div>
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/" target="_blank" rel="noopener noreferrer">Check my repos</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <p class="footer-text">
+        &copy; <span id="current-year">2026</span> Atul. Built with <span class="heart">&hearts;</span> and curiosity.
+      </p>
+      <div class="social-links">
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="GitHub">
+          <i data-lucide="github"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="LinkedIn">
+          <i data-lucide="linkedin"></i>
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener noreferrer" class="social-link" aria-label="Twitter / X">
+          <i data-lucide="twitter"></i>
+        </a>
+      </div>
+      <button class="back-to-top" id="back-to-top" aria-label="Back to top">
+        <i data-lucide="arrow-up" style="width:20px;height:20px;"></i>
+      </button>
+    </div>
+  </footer>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script src="js/particles.js"></script>
+  <script src="js/typing.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/main.js"></script>
+
+  <!-- Initialize Lucide Icons -->
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+</html>
