@@ -16,6 +16,12 @@ emailjs.init({
 
 const contactForm = document.getElementById("contact-form");
 
+contactForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    console.log("Form submitted");
+});
+
     /* ================================================== *
      *  1. Scroll Reveal (one-time entrance animations)
      * ================================================== */
