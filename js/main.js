@@ -19,7 +19,16 @@ const contactForm = document.getElementById("contact-form");
 contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    console.log("Form submitted");
+    emailjs.sendForm(
+    "Conversation-email",
+    "template_ifkpavp",
+    contactForm
+)
+.then(function () {
+    console.log("Message sent successfully!");
+})
+.catch(function (error) {
+    console.error("Failed to send message:", error);
 });
 
     /* ================================================== *
