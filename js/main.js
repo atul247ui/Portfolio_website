@@ -3,6 +3,12 @@
  * Global initialisations: scroll-reveal animations, back-to-top button,
  * contact form validation with toast notifications, and footer year.
  */
+
+emailjs.init({
+    publicKey: "YOUR_PUBLIC_KEY"
+});
+
+
 (function () {
   'use strict';
 
