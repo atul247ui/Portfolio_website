@@ -5,7 +5,7 @@
  */
 
 emailjs.init({
-    publicKey: "YOUR_PUBLIC_KEY"
+    publicKey: "m0NMvYzP1DJo7aSG2"
 });
 
 
