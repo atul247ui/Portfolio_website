@@ -35,7 +35,7 @@ portfolio/
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/portfolio.git
+git clone https://github.com/atul247ui/portfolio.git
 ```
 
 Open `index.html` in your browser or use **Live Server** in VS Code.
